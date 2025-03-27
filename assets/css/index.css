@@ -1,0 +1,428 @@
+:root{
+    --white: #ffffff;
+}
+@font-face {
+    font-family: Poppins;
+    src: url("./ChakraPetch-Light.ttf");
+  }
+  * {
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    z-index: 0;
+    text-decoration: none;
+    list-style: none;
+    font-style: normal;
+    outline: 0;
+    transition: all 0.5s;
+  }
+  ::placeholder {
+    color: gray;
+  }
+  
+  body {
+    width: 100%;
+    max-height: 90vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-image: url(../img/bcg/Colored\ Shapes\ \(1\).svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--white);
+    cursor: none;
+  }
+
+  /*HOME-PAGE*/
+.container__nav_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100vh;
+    padding:5% 5% 0 5%;
+}
+.container__context_page{
+    position: absolute;
+    top: 0;
+    left:45%;
+    width: 50%;
+    padding: 0% 3% 0 3%;
+    max-height: 100vh;
+    max-height: 89vh;
+    height: auto;
+    overflow-y: auto;
+}
+
+.container__nav_menu .flex__section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.container__nav_menu .my_apresentation .flex_text{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        font-size: 50px;
+    }
+
+    p{
+        font-size: 18px;
+        padding: 10px 0;
+    }
+    em{
+        font-size: 15px;
+        padding: 10px 0;
+    }
+}
+
+.container__nav_menu .my_nav .navbar_flex{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    .flex_itens_nav{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        li{
+            min-width: 100px;
+            font-size: 15px;
+            position: relative;
+            display: flex;
+            margin-left: 10%;
+            padding: 10px 0;
+            cursor: pointer;
+            transition: all 1s;
+            width: 120px;
+            color: rgb(155, 155, 155);
+        }
+        li::after{
+            content: '';
+            position: absolute;
+            top: 40%;
+            left:-30%;
+            width: 30px;
+            height: 3px;
+            transition: all 1s;
+            border-bottom: solid 2px var(--white);
+            border-color: rgb(155, 155, 155);
+        }
+        li:hover{
+            margin-left: 20%;
+            transition: all 1s;
+            color: var(--white);
+        }
+        li:hover::after{
+            width: 70px;
+            left: -70%;
+            transition: all 1s;
+            border-color: var(--white);
+        }
+
+        li.active{
+            margin-left: 20%;
+            transition: all 1s;
+            color: var(--white);
+        }
+        li.active::after{
+            width: 70px;
+            left: -70%;
+            transition: all 1s;
+            border-color: var(--white);
+        }
+    }
+}
+
+.container__context_page .flex__section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+}
+.container__context_page .my_description .flex__text{
+    font-size: 16px;
+}
+
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(114, 111, 186, 0.8), rgba(0, 255, 255, 0.2));
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s linear;
+    box-shadow: rgb(131, 151, 198) 0px 22px 70px 4px;
+}
+.container__context_page .my_experients{
+    margin: 20% 0;
+}
+.container__context_page .my_experients .card_experients{
+    width: 95%;
+    padding: 10px 2.5%;
+    height: auto;
+    margin: 2% 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+
+    .data_experiece{
+        width: 30%;
+        font-size: 15px;
+    }
+    .develop_experience{
+        width: 70%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        h3{
+            font-size: 15px;
+            font-weight: 700;
+        }
+        p.flex_text{
+            font-size: 15px;
+            padding: 10px 0 0 0;
+            color: rgba(192, 192, 192, 0.525);
+        }
+        .flex_tecnology{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            flex-direction: row;
+            gap: 5%;
+            align-items: center;
+            padding: 10px 0;
+
+            p{
+                min-width: 70px;
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                background-color: #005e4a81;
+                padding: 5px;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+.container__context_page .my_experients .card_experients:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+.container__context_page .my_experients .card_experients:hover h3{
+    color: #0028ac;
+}
+
+
+
+
+
+
+
+
+.container__context_page .my_project{
+    margin: 20% 0;
+}
+.container__context_page .my_project .card_project{
+    width: 95%;
+    padding: 10px 2.5%;
+    height: auto;
+    margin: 2% 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    gap: 5%;
+
+    .img{
+        width: 30%;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+
+        em{
+            font-size: 15px;
+            text-decoration: underline;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5%;
+            cursor: pointer;
+        }
+
+        img{
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+        }
+    }
+    .develop_experience{
+        width: 70%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        h3{
+            font-size: 15px;
+            font-weight: 700;
+        }
+        p.flex_text{
+            font-size: 15px;
+            padding: 10px 0 0 0;
+            color: rgba(192, 192, 192, 0.525);
+        }
+        .flex_tecnology{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            flex-direction: row;
+            gap: 5%;
+            align-items: center;
+            padding: 10px 0;
+
+            p{
+                min-width: 70px;
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                background-color: #005e4a81;
+                padding: 5px;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+.container__context_page .my_project .card_project:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+.container__context_page .my_project .card_project:hover h3{
+    color: #0028ac;
+}
+.views-project{
+    margin: 10% 0 0 0;
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    text-align: end;
+    justify-content: end;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+
+/*ALL PROJECT PAGE*/
+body.archive{
+    flex-direction: column;
+    overflow-y: auto;
+}
+.context_page{
+    width: 100%;
+    height: auto;
+    padding: 7% 5%;
+
+    p{
+        font-size: 15px;
+        display: flex;
+        gap: 1%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    h1{
+        font-size: 50px;
+        padding: 10px 0;
+    }
+}
+.table_project{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+
+    table{
+        width: 90%;
+        padding: 0 5%;
+        height: auto;
+        font-size: 15px;
+        overflow-y: auto;
+
+        thead{
+            tr{
+                th{
+                    padding: 10px;
+                    text-align: start;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        tbody{
+            tr{
+                
+                td{
+                    padding: 30px 10px;
+                    font-weight: 100;
+                    font-size: 15px;
+                    color: rgb(155, 155, 155);
+                    border-bottom: solid 1px rgba(227, 227, 227, 0.237);
+                }
+                td.big_text{
+                    font-weight: 700;
+                }
+                td.group_tec{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1%;
+
+                    span{
+                        color: var(--white);
+                        background-color: #005e4a81;
+                        padding: 5px;
+                        border-radius: 20px;
+                        
+                    }
+                }
+                td.link_project:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+}

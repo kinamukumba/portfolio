@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kina Mukumba | Portfólio</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="root container__body flex__body archive">
+    <section class="context_page flex__section">
+        <p class="flex_text">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            Kina Mukumba
+        </p>
+        <h1 class="flex__title">Todos Projectos</h1>
+    </section>
+    <section class="table_project flex__section">
+        <table class="flex__table">
+            <thead>
+                <tr>
+                    <th>Ano</th>
+                    <th>Projecto</th>
+                    <th>Tecnologias</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024</td>
+                    <td class="big_text">INOTEC</td>
+                    <td class="group_tec">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MYSQL</span>
+                        <span>Ruby</span>
+                    </td>
+                    <td class="link_project">inotec.it.ao/</td>
+                </tr>
+
+                <tr>
+                    <td>2024</td>
+                    <td class="big_text">FIJE INTERNACIONAL</td>
+                    <td class="group_tec">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MYSQL</span>
+                        <span>Ruby</span>
+                    </td>
+                    <td class="link_project">fiji.org.ao/</td>
+                </tr>
+
+                <tr>
+                    <td>2024</td>
+                    <td class="big_text">BOLSAS-JUSTAS</td>
+                    <td class="group_tec">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MYSQL</span>
+                        <span>Ruby</span>
+                    </td>
+                    <td class="link_project">bolsas-justas.vercel.app/</td>
+                </tr>
+
+                <tr>
+                    <td>2024</td>
+                    <td class="big_text">ECOMMERCE</td>
+                    <td class="group_tec">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>LOCALSTORAGE</span>
+                    </td>
+                    <td class="link_project">e-commerce-tau-indol.vercel.app/</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="cursor"></div>
+    <script>
+        let cursor = document.querySelector(".cursor");
+
+        document.addEventListener("mousemove", (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        });
+    </script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
